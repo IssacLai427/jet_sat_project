@@ -1,4 +1,11 @@
 /output
 /nnlojet-v1.0.2
-/LHAPDFsets/*
-!/LHAPDFsets/lhapdf.conf
+/LHAPDFsets/CT18LO
+/LHAPDFsets/CT18NLO
+/LHAPDFsets/CT18NNLO
+/LHAPDFsets/MSHT20lo_as130
+/LHAPDFsets/MSHT20nlo_as118
+/LHAPDFsets/MSHT20nnlo_as118
+/LHAPDFsets/NNPDF40_lo_as_01180
+/LHAPDFsets/NNPDF40_nlo_as_01180
+/LHAPDFsets/NNPDF40_nnlo_as_01180
