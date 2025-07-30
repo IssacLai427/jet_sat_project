@@ -1,0 +1,33 @@
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+# User specific environment
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
+then
+    source "//cvmfs/sft.cern.ch/lcg/views/LCG_107/x86_64-el9-gcc14-opt/setup.sh"
+    source "//cvmfs/sft.cern.ch/lcg/releases/LCG_107/MCGenerators/lhapdf/6.5.5/x86_64-el9-gcc14-opt/lhapdfenv-genser.sh"
+    source "nnlojet-v1.0.2/install/share/nnlojet-completion.sh"
+    source "//cvmfs/sft.cern.ch/lcg/releases/LCG_107/ROOT/6.34.02/x86_64-el9-gcc14-opt/bin/thisroot.sh"
+    export LHAPDF_DATA_PATH="LHAPDFsets"
+    export ROOT_INCLUDE_PATH="//cvmfs/sft.cern.ch/lcg/releases/LCG_107/Vc/1.4.5/x86_64-el9-gcc14-opt/include"
+    export PYTHONPATH="nnlojet-v1.0.2/install/dokan-venv/lib/python3.11/site-packages:/cvmfs/sft.cern.ch/lcg/views/LCG_107/x86_64-el9-gcc14-opt/lib/python3.11/site-packages:$PYTHONPATH"
+    PATH="$HOME/.local/bin:$HOME/bin:$PATH":nnlojet-v1.0.2/install/bin
+fi
+export PATH
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
+
+# User specific aliases and functions
+if [ -d ~/.bashrc.d ]; then
+	for rc in ~/.bashrc.d/*; do
+		if [ -f "$rc" ]; then
+			. "$rc"
+		fi
+	done
+fi
+
+unset rc
