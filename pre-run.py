@@ -6,7 +6,7 @@ import subprocess
 np.set_printoptions(suppress=True)
 
 # Parameter options
-sqrts = [1, 3, 7, 20, 50, 100, 300, 1000, 10000]
+sqrts = [1, 3, 7, 20, 50, 100, 300, 1000]
 channels = ["LO", "NLO", "NNLO"]
 runtimes = [86400,432000,1209600]
 cpus = [10,10,16]

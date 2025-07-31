@@ -1,0 +1,9 @@
+https://lhapdfsets.web.cern.ch/current/CT18LO.tar.gz
+https://lhapdfsets.web.cern.ch/current/CT18NLO.tar.gz
+https://lhapdfsets.web.cern.ch/current/CT18NNLO.tar.gz
+https://lhapdfsets.web.cern.ch/current/MSHT20lo_as130.tar.gz
+https://lhapdfsets.web.cern.ch/current/MSHT20nlo_as118.tar.gz
+https://lhapdfsets.web.cern.ch/current/MSHT20nnlo_as118.tar.gz
+https://lhapdfsets.web.cern.ch/current/NNPDF40_lo_as_01180.tar.gz
+https://lhapdfsets.web.cern.ch/current/NNPDF40_nlo_as_01180.tar.gz
+https://lhapdfsets.web.cern.ch/current/NNPDF40_nnlo_as_01180.tar.gz

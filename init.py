@@ -27,7 +27,7 @@ elif channel == "NNLO":
     maxjob = 10000
     maxCjob = 91
 
-sqrts = [1, 3, 7, 20, 50, 100, 300, 1000, 10000]
+sqrts = [1, 3, 7, 20, 50, 100, 300, 1000]
 start_dir = os.getcwd()
 
 target_dir = f"output/{channel}/{pdf}"
@@ -81,12 +81,11 @@ for s in sqrts:
 
     stdout, stderr = process.communicate(input=responses)
 
-if policy == "local":    
-    subprocess.run(["condor_submit", "submit.sub"])
-    print(f"runs for {pdf} at {channel} have been submitted.")
-    os.chdir(start_dir)
+print(f"runs for {pdf} at {channel} have been initialised.")
+
+if policy == "local":
+    print(f"Use 'condor_submit submit.sub' to submit all the runs.")
 
 elif policy == "htcondor":    
-    print(f"runs for {pdf} at {channel} have been initialised.")
     print(f"Use 'nnlojet-run submit sqrts=sTeV_{channel}_{pdf}' to submit each sqrt(s) run.")
 
