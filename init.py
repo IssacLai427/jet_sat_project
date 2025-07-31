@@ -87,5 +87,5 @@ if policy == "local":
     print(f"Use 'condor_submit submit.sub' to submit all the runs.")
 
 elif policy == "htcondor":    
-    print(f"Use 'nnlojet-run submit sqrts=sTeV_{channel}_{pdf}' to submit each sqrt(s) run.")
+    print(f"Use 'nnlojet-run submit sqrts='s'TeV_{channel}_{pdf}' to submit each sqrt(s) run replacing s by the number.")
 

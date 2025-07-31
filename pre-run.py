@@ -9,7 +9,7 @@ np.set_printoptions(suppress=True)
 sqrts = [1, 3, 7, 20, 50, 100, 300, 1000]
 channels = ["LO", "NLO", "NNLO"]
 runtimes = [86400,432000,1209600]
-cpus = [10,10,16]
+cpus = 10
 start_dir = os.getcwd()
 
 # PDF dictionaries: channel -> [(PDF string, tag), ...]
@@ -31,7 +31,7 @@ pdf_dict = {
     ]
 }
 
-# Template with placeholders
+#Runcard Template
 template = """PROCESS  JJ
   collider = pp  
   sqrts = {sqrts}000
@@ -130,7 +130,7 @@ for channel in channels:
 
 os.chdir(start_dir)
 
-# Create the shell script content
+# Create the shell script content for condor
 script_content = """#!/bin/bash
 
 # Check if the correct number of arguments is provided
@@ -155,7 +155,7 @@ mv "raw" "raw_sqrts=${sqrts}TeV"
 mv "result" "result_sqrts=${sqrts}TeV"
 """
 
-# Create the submission file content
+# Create the condor submission file content
 submit_content = """universe = vanilla
 executable = run_nnlojet.sh
 arguments = "{channel} {pdf_tag} {s}"
