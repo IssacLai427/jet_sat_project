@@ -25,10 +25,12 @@ git clone https://github.com/aykhuss/dokan.git
 #ensure correct path to python and lhapdf
 source .bashrc_nnlojet
 
+#Copy the lines below in case of just updating of dokan only
 mkdir build
 cd build
 cmake .. -DCMAKE_BUILD_TYPE=RelWithDebInfo
 make -j8
 make install
+#Copy the lines above in case of just updating of dokan only
 
 source .bashrc_nnlojet
