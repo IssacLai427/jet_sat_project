@@ -1,3 +1,6 @@
+Note: Please temporarily change all the paths in .bashrc_nnlojet to an absolute path, I will look into it later.
+
+
 This file will describe how to run the LO, NLO, and NNLO jobs in NNLOJET for the low-x jet saturation project.
 
 When cloning this repository for the first time, please run setup.sh in the directory.\
